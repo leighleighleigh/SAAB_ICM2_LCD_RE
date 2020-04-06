@@ -4,3 +4,6 @@
 [submodule "Arduino_ESP8266_ICM2_Development/lib/Adafruit_SAAB_ICM2_LCD_Driver"]
 	path = Arduino_ESP8266_ICM2_Development/lib/Adafruit_SAAB_ICM2_LCD_Driver
 	url = git@github.com:leighleighleigh/Adafruit_SAAB_ICM2_LCD_Driver.git
+[submodule "Arduino_ESP8266_ICM2_Development/lib/Arduino_SAAB_ICM2_LCD_Driver"]
+	path = Arduino_ESP8266_ICM2_Development/lib/Arduino_SAAB_ICM2_LCD_Driver
+	url = git@github.com:leighleighleigh/Arduino_SAAB_ICM2_LCD_Driver.git
