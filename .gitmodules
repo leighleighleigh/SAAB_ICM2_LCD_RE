@@ -1,0 +1,3 @@
+[submodule "Adafruit_SAAB_ICM2_LCD_Driver"]
+	path = Adafruit_SAAB_ICM2_LCD_Driver
+	url = git@github.com:leighleighleigh/Adafruit_SAAB_ICM2_LCD_Driver.git
