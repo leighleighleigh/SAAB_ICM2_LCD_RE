@@ -5,7 +5,7 @@ import time
 import adafruit_framebuf  # sudo pip3 install adafruit-circuitpython-framebuf
 import math
 
-BUSPIRATE_PORT = '/dev/ttyUSB0'  # customize this! Find it in device manager.
+BUSPIRATE_PORT = '/dev/ttyUSB1'  # customize this! Find it in device manager.
 
 # DISPLAY PARAMETERS
 # Visible width: 106

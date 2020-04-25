@@ -5,39 +5,20 @@
 #include <SAAB_ICM2.h>
 #include <myBitmap.h>
 
+// A few code changes because I was making absolute sure my wiring was the problem
+// and not the code.
+
 #define WIDTH 106
 #define HEIGHT 64
 SAAB_ICM2 display = SAAB_ICM2();
-
-void backlightCtrl(bool state, double fadeTimeMs)
-{
-	// PWM BACKLIGHT
-	if(state){
-		// increase the LED brightness
-		for (int dutyCycle = 0; dutyCycle < 1023; dutyCycle++)
-		{
-			// changing the LED brightness with PWM
-			analogWrite(D3, dutyCycle);
-			delay(ceil(fadeTimeMs / 1024));
-		}
-	}else{
-		// decrease the LED brightness
-		for (int dutyCycle = 1023; dutyCycle > 0; dutyCycle--)
-		{
-			// changing the LED brightness with PWM
-			analogWrite(D3, dutyCycle);
-			delay(ceil(fadeTimeMs / 1024));
-		}
-	}
-}
 
 void setup()
 {
 	Serial.begin(115200);
 	Serial.println("ICM2 DISPLAY LIBRARY TEST");
 	Wire.begin();
-	Wire.setClock(400000);
 
+	Wire.setClock(400000);
 
 	if (!display.begin())
 	{
@@ -49,18 +30,41 @@ void setup()
 
 	// Clean the debris off the display
 	display.forceClear();
-	backlightCtrl(false,0);
+	display.clearDisplay();
+	display.setCursor(1,1);
+	display.setTextSize(1);
+	display.fillScreen(ICM2_OFF);
+
+	display.fillRect(0,0,WIDTH,9,ICM2_ON);
+	display.setTextColor(ICM2_OFF);
+	display.println("QUEUE");
+
+	display.setTextColor(ICM2_ON);
+	display.setCursor(0,11);
+	display.println("SONG 1 ");
+	display.println("SONG 2");
+	display.println("SONG 3");
+	display.println("SONG 4");
+	display.println("SONG 5");
+	display.println("SONG 6");
+	display.println("SONG 7");
+
+	display.display();
 	delay(1000);
 }
 
+float val = 0;
+
 void loop()
 {
-	display.clearDisplay();
-	display.drawBitmap(0, 0, myBitmap, 106, 64, ICM2_ON);
+	val += 0.01;
+	// Clear rect
+	int sz = 48;
+	int xOffset = 8;
+	display.fillRect(WIDTH-sz-xOffset,HEIGHT-sz,sz,sz,ICM2_OFF);
+	int YUval = abs(cos(val)*sz);
+	display.fillRect(WIDTH-sz-xOffset,HEIGHT-sz,sz,YUval,ICM2_ON);
+	delay(10);
 	display.display();
-	backlightCtrl(true,2048);
-	backlightCtrl(false,2048);
-	display.clearDisplay();
-	display.display();
-	delay(1000);
+	Serial.println(YUval);
 }
