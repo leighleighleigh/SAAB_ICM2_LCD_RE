@@ -4,23 +4,23 @@
     fortyfive_degree
   )
   (autoroute_settings
-    (fanout on)
+    (fanout off)
     (autoroute on)
     (postroute on)
     (vias on)
     (via_costs 50)
     (plane_via_costs 5)
     (start_ripup_costs 100)
-    (start_pass_no 2672)
+    (start_pass_no 1042)
     (layer_rule F.Cu
       (active on)
-      (preferred_direction vertical)
+      (preferred_direction horizontal)
       (preferred_direction_trace_costs 1.0)
-      (against_preferred_direction_trace_costs 7.5)
+      (against_preferred_direction_trace_costs 5.9)
     )
     (layer_rule B.Cu
       (active on)
-      (preferred_direction horizontal)
+      (preferred_direction vertical)
       (preferred_direction_trace_costs 1.0)
       (against_preferred_direction_trace_costs 1.2)
     )
@@ -63,13 +63,13 @@
     )
   )
   (class "kicad_default"
-    "Net-(J1-Pad15)" "Net-(J1-Pad14)" "Net-(J1-Pad13)" "Net-(J1-Pad12)" "Net-(J1-Pad11)" "Net-(J1-Pad10)" "Net-(J1-Pad9)" "Net-(J1-Pad8)"
-    "Net-(J1-Pad7)" "Net-(J1-Pad6)" "Net-(J1-Pad5)" "Net-(J1-Pad4)" "Net-(J1-Pad3)" "Net-(J1-Pad2)" "Net-(J1-Pad1)" "Net-(J1-Pad30)"
-    "Net-(J1-Pad29)" "Net-(J1-Pad28)" "Net-(J1-Pad27)" "Net-(J1-Pad26)" "Net-(J1-Pad25)" "Net-(J1-Pad24)" "Net-(J1-Pad23)" "Net-(J1-Pad22)"
-    "Net-(J1-Pad21)" "Net-(J1-Pad20)" "Net-(J1-Pad19)" "Net-(J1-Pad18)" "Net-(J1-Pad17)" "Net-(J1-Pad16)" "Net-(J1P9-Pad5)" "Net-(J1P9-Pad4)"
-    "Net-(J1P9-Pad3)" "Net-(J1P9-Pad2)" "Net-(J1P9-Pad1)" "Net-(J1P10-Pad5)" "Net-(J1P10-Pad4)" "Net-(J1P10-Pad3)" "Net-(J1P10-Pad2)" "Net-(J1P10-Pad1)"
-    "Net-(J1P8-Pad5)" "Net-(J1P8-Pad4)" "Net-(J1P8-Pad3)" "Net-(J1P8-Pad2)" "Net-(J1P8-Pad1)" "Net-(J1P7-Pad5)" "Net-(J1P7-Pad4)" "Net-(J1P7-Pad3)"
-    "Net-(J1P7-Pad2)" "Net-(J1P7-Pad1)"
+    "Net-(J1-Pad10)" "Net-(J1-Pad9)" "Net-(J1-Pad8)" "Net-(J1-Pad7)" "Net-(J1-Pad6)" "Net-(J1-Pad5)" "Net-(J1-Pad4)" "Net-(J1-Pad3)"
+    "Net-(J1-Pad2)" "Net-(J1-Pad1)" "Net-(J2-Pad20)" "Net-(J2-Pad18)" "Net-(J2-Pad16)" "Net-(J2-Pad14)" "Net-(J2-Pad12)" "Net-(J4-Pad14)"
+    "Net-(J4-Pad12)" "Net-(J4-Pad10)" "Net-(J4-Pad8)" "Net-(J4-Pad6)" "Net-(J4-Pad4)" "Net-(J4-Pad2)" "Net-(J4-Pad15)" "Net-(J4-Pad13)"
+    "Net-(J4-Pad11)" "Net-(J4-Pad9)" "Net-(J4-Pad7)" "Net-(J4-Pad5)" "Net-(J4-Pad3)" "Net-(J4-Pad1)" "Net-(J5-Pad30)" "Net-(J5-Pad28)"
+    "Net-(J5-Pad26)" "Net-(J5-Pad24)" "Net-(J5-Pad22)" "Net-(J5-Pad20)" "Net-(J5-Pad18)" "Net-(J5-Pad16)" "Net-(J2-Pad19)" "Net-(J2-Pad17)"
+    "Net-(J2-Pad15)" "Net-(J2-Pad13)" "Net-(J2-Pad11)" "Net-(J5-Pad29)" "Net-(J5-Pad27)" "Net-(J5-Pad25)" "Net-(J5-Pad23)" "Net-(J5-Pad21)"
+    "Net-(J5-Pad19)" "Net-(J5-Pad17)"
     (clearance_class "kicad_default")
     (via_rule kicad_default)
     (rule
